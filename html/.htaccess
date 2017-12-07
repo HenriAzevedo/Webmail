@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+        Options -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    #RewriteCond %{REQUEST_FILENAME} !-f
+    #RewriteRule favicon.ico /images/favicon.ico [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    <FilesMatch "\.(config|inc|txt|htaccess|php|json)$">
+        Deny from all
+    </FilesMatch>
+    <FilesMatch "index.php">
+        allow from all
+    </FilesMatch>
+
+</IfModule>

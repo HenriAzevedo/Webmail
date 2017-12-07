@@ -1,0 +1,16 @@
+{
+	"name": "Webmail",
+    "description": "Webmail",
+    "authors": [
+        {
+            "name": "Henri Mateus Santos de Azevedo"
+        }
+    ],
+	"autoload":{
+		"psr-4":{
+			"Model\\":"app/model",
+			"Controller\\":"app/controller",
+			"Api\\":"app/api"
+		}
+	}
+}
